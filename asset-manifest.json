@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/love-card/static/css/main.91f8cb22.css",
-    "main.js": "/love-card/static/js/main.ba165581.js",
+    "main.js": "/love-card/static/js/main.a1738709.js",
     "static/js/453.6cb114fc.chunk.js": "/love-card/static/js/453.6cb114fc.chunk.js",
     "index.html": "/love-card/index.html",
     "main.91f8cb22.css.map": "/love-card/static/css/main.91f8cb22.css.map",
-    "main.ba165581.js.map": "/love-card/static/js/main.ba165581.js.map",
+    "main.a1738709.js.map": "/love-card/static/js/main.a1738709.js.map",
     "453.6cb114fc.chunk.js.map": "/love-card/static/js/453.6cb114fc.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.91f8cb22.css",
-    "static/js/main.ba165581.js"
+    "static/js/main.a1738709.js"
   ]
 }
