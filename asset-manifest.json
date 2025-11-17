@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/chudu-hust-hl/love-card.git/static/css/main.91f8cb22.css",
-    "main.js": "/chudu-hust-hl/love-card.git/static/js/main.ee2d360f.js",
-    "static/js/453.6cb114fc.chunk.js": "/chudu-hust-hl/love-card.git/static/js/453.6cb114fc.chunk.js",
-    "index.html": "/chudu-hust-hl/love-card.git/index.html",
-    "main.91f8cb22.css.map": "/chudu-hust-hl/love-card.git/static/css/main.91f8cb22.css.map",
-    "main.ee2d360f.js.map": "/chudu-hust-hl/love-card.git/static/js/main.ee2d360f.js.map",
-    "453.6cb114fc.chunk.js.map": "/chudu-hust-hl/love-card.git/static/js/453.6cb114fc.chunk.js.map"
+    "main.css": "/love-card/static/css/main.91f8cb22.css",
+    "main.js": "/love-card/static/js/main.ba165581.js",
+    "static/js/453.6cb114fc.chunk.js": "/love-card/static/js/453.6cb114fc.chunk.js",
+    "index.html": "/love-card/index.html",
+    "main.91f8cb22.css.map": "/love-card/static/css/main.91f8cb22.css.map",
+    "main.ba165581.js.map": "/love-card/static/js/main.ba165581.js.map",
+    "453.6cb114fc.chunk.js.map": "/love-card/static/js/453.6cb114fc.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.91f8cb22.css",
-    "static/js/main.ee2d360f.js"
+    "static/js/main.ba165581.js"
   ]
 }
