@@ -1,0 +1,68 @@
+.floating-hearts-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 5;
+}
+
+.floating-heart-item {
+  position: absolute;
+  font-size: 1.2rem;
+  opacity: 0.7;
+  animation: floatUp 8s linear infinite;
+}
+
+/* Size variants */
+.small .floating-heart-item {
+  font-size: 0.8rem;
+}
+
+.medium .floating-heart-item {
+  font-size: 1.2rem;
+}
+
+.large .floating-heart-item {
+  font-size: 1.6rem;
+}
+
+/* Speed variants */
+.slow .floating-heart-item {
+  animation-duration: 12s;
+}
+
+.normal .floating-heart-item {
+  animation-duration: 8s;
+}
+
+.fast .floating-heart-item {
+  animation-duration: 5s;
+}
+
+/* Individual heart variations */
+.heart-0 { animation-delay: 0s; }
+.heart-1 { animation-delay: 1s; }
+.heart-2 { animation-delay: 2s; }
+.heart-3 { animation-delay: 3s; }
+.heart-4 { animation-delay: 4s; }
+.heart-5 { animation-delay: 5s; }
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(100vh) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.7;
+  }
+  90% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(-10vh) rotate(360deg);
+    opacity: 0;
+  }
+}

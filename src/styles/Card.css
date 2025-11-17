@@ -1,0 +1,600 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Crimson+Text:wght@400;600&family=Great+Vibes&display=swap');
+
+.card-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, 
+    #ffeef8 0%, 
+    #ffe4e6 25%, 
+    #ffd6dd 50%, 
+    #ffccd5 75%, 
+    #ffb6c1 100%
+  );
+  background-attachment: fixed;
+  position: relative;
+  overflow-x: hidden;
+  padding: 2rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Add subtle pattern overlay */
+.card-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: 
+    radial-gradient(circle at 20% 20%, rgba(255, 182, 193, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(255, 192, 203, 0.1) 0%, transparent 50%),
+    radial-gradient(circle at 40% 60%, rgba(255, 228, 225, 0.1) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+.background-decoration {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.floating-heart {
+  position: absolute;
+  font-size: 1.5rem;
+  opacity: 0.6;
+  animation: floatAround 8s ease-in-out infinite;
+}
+
+.heart-1 {
+  top: 10%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.heart-2 {
+  top: 20%;
+  right: 15%;
+  animation-delay: 2s;
+}
+
+.heart-3 {
+  top: 60%;
+  left: 5%;
+  animation-delay: 4s;
+}
+
+.heart-4 {
+  bottom: 20%;
+  right: 10%;
+  animation-delay: 1s;
+}
+
+.heart-5 {
+  top: 80%;
+  left: 50%;
+  animation-delay: 3s;
+}
+
+.heart-6 {
+  top: 40%;
+  right: 5%;
+  animation-delay: 5s;
+}
+
+.card-content {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(10px);
+  border-radius: 30px;
+  padding: 3rem 2rem;
+  max-width: 600px;
+  width: 100%;
+  box-shadow: 
+    0 25px 50px rgba(255, 182, 193, 0.3),
+    0 0 0 1px rgba(255, 192, 203, 0.3);
+  border: 3px solid rgba(255, 192, 203, 0.4);
+  position: relative;
+  animation: cardEntrance 1s ease-out;
+}
+
+.card-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.card-title {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3rem;
+  color: #8b4567;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(255, 182, 193, 0.5);
+  line-height: 1.1;
+}
+
+.title-decoration {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.sparkle {
+  font-size: 1.2rem;
+  animation: sparkle 2s ease-in-out infinite;
+}
+
+.heart-icon {
+  font-size: 1.5rem;
+  animation: heartbeat 1.5s ease-in-out infinite;
+}
+
+.card-main {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem; /* Reduced from 2.5rem */
+  align-items: center;
+}
+
+.photo-section {
+  position: relative;
+  width: 280px;
+  height: 200px;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.love-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  border: 3px solid rgba(255, 192, 203, 0.6);
+  box-shadow: 0 10px 25px rgba(255, 182, 193, 0.4);
+}
+
+.photo-placeholder {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, 
+    rgba(255, 240, 245, 0.8) 0%, 
+    rgba(255, 228, 225, 0.8) 100%
+  );
+  border: 3px dashed rgba(255, 192, 203, 0.6);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 25px rgba(255, 182, 193, 0.4);
+}
+
+.placeholder-content {
+  text-align: center;
+  color: #8b4567;
+}
+
+.camera-icon {
+  font-size: 2.5rem;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.placeholder-content p {
+  font-family: 'Crimson Text', serif;
+  font-size: 1rem;
+  margin: 0;
+  font-style: italic;
+}
+
+.photo-frame-decoration {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.corner-heart {
+  position: absolute;
+  font-size: 1rem;
+  animation: heartbeat 2s ease-in-out infinite;
+}
+
+.top-left {
+  top: -8px;
+  left: -8px;
+}
+
+.top-right {
+  top: -8px;
+  right: -8px;
+}
+
+.bottom-left {
+  bottom: -8px;
+  left: -8px;
+}
+
+.bottom-right {
+  bottom: -8px;
+  right: -8px;
+}
+
+.button-section {
+  text-align: center;
+}
+
+.open-card-btn {
+  background: linear-gradient(45deg, #ff69b4, #ff1493, #ff69b4);
+  background-size: 200% 100%;
+  color: white;
+  border: none;
+  padding: 18px 40px;
+  font-size: 1.3rem;
+  font-family: 'Dancing Script', cursive;
+  font-weight: 700;
+  border-radius: 50px;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.4s ease;
+  box-shadow: 
+    0 8px 25px rgba(255, 105, 180, 0.4),
+    0 0 0 3px rgba(255, 255, 255, 0.3);
+  overflow: hidden;
+}
+
+.open-card-btn:hover {
+  transform: translateY(-5px) scale(1.05);
+  background-position: 100% 0;
+  box-shadow: 
+    0 15px 35px rgba(255, 105, 180, 0.6),
+    0 0 0 5px rgba(255, 255, 255, 0.5);
+}
+
+.open-card-btn.opened {
+  background: linear-gradient(45deg, #ff87cedf, #ff69b4, #ff87cedf);
+}
+
+.btn-text {
+  position: relative;
+  z-index: 2;
+}
+
+.btn-decoration {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.sparkle-1,
+.sparkle-2 {
+  position: absolute;
+  font-size: 0.8rem;
+  animation: sparkleBtn 1.5s ease-in-out infinite;
+}
+
+.sparkle-1 {
+  top: -15px;
+  left: -20px;
+}
+
+.sparkle-2 {
+  bottom: -15px;
+  right: -20px;
+  animation-delay: 0.7s;
+}
+
+.message-preview {
+  text-align: center;
+  padding: 1.5rem;
+  background: rgba(255, 240, 245, 0.7);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 192, 203, 0.3);
+  max-width: 400px;
+}
+
+.preview-text {
+  font-family: 'Crimson Text', serif;
+  font-size: 1.1rem;
+  color: #8b4567;
+  margin: 0;
+  font-style: italic;
+  text-shadow: 1px 1px 2px rgba(255, 182, 193, 0.3);
+}
+
+.card-footer {
+  text-align: center;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 2px dotted rgba(255, 192, 203, 0.4);
+}
+
+.footer-decoration {
+  font-family: 'Crimson Text', serif;
+  font-size: 1rem;
+  color: #8b4567;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.beating-heart {
+  font-size: 1.2rem;
+  animation: heartbeat 1.8s ease-in-out infinite;
+}
+
+/* Photo Gallery Styles - Minimized spacing for secondary images */
+.photo-gallery {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin: 0.5rem 0; /* Reduced from 1rem 0 */
+  flex-wrap: wrap;
+}
+
+.gallery-item {
+  position: relative;
+  width: 100px; /* Reduced from 120px */
+  height: 100px; /* Reduced from 120px */
+  border-radius: 12px; /* Reduced from 15px */
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  background: linear-gradient(135deg, rgba(255, 240, 245, 0.5), rgba(255, 228, 225, 0.5));
+}
+
+.gallery-item:hover {
+  transform: scale(1.05) rotate(2deg);
+}
+
+.gallery-item:nth-child(even):hover {
+  transform: scale(1.05) rotate(-2deg);
+}
+
+.gallery-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 15px;
+  border: 2px solid rgba(255, 192, 203, 0.6);
+  box-shadow: 0 8px 20px rgba(255, 182, 193, 0.3);
+  transition: all 0.3s ease;
+}
+
+/* Enhanced hover effect for photos */
+.gallery-item:hover .gallery-photo {
+  box-shadow: 0 12px 30px rgba(255, 182, 193, 0.5);
+  border-color: rgba(255, 105, 180, 0.8);
+}
+
+.gallery-decoration {
+  position: absolute;
+  top: 3px; /* Reduced from 5px */
+  right: 3px; /* Reduced from 5px */
+  pointer-events: none;
+  z-index: 10;
+}
+
+.mini-heart {
+  font-size: 0.8rem; /* Reduced from 1rem */
+  animation: heartbeat 2s ease-in-out infinite;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.8);
+  filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.3));
+}
+
+/* Alternative layout for better portrait image handling */
+@media (min-width: 769px) {
+  .photo-gallery {
+    gap: 0.8rem; /* Reduced from 1.5rem */
+  }
+  
+  .gallery-item {
+    width: 110px; /* Reduced from 140px */
+    height: 110px; /* Reduced from 140px */
+  }
+}
+
+/* Animations */
+@keyframes cardEntrance {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes floatAround {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-15px) rotate(90deg);
+  }
+  50% {
+    transform: translateY(-5px) rotate(180deg);
+  }
+  75% {
+    transform: translateY(-20px) rotate(270deg);
+  }
+}
+
+@keyframes sparkle {
+  0%, 100% {
+    transform: scale(1) rotate(0deg);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.2) rotate(180deg);
+    opacity: 1;
+  }
+}
+
+@keyframes sparkleBtn {
+  0%, 100% {
+    transform: scale(0.8);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 1;
+  }
+}
+
+@keyframes heartbeat {
+  0%, 50%, 100% {
+    transform: scale(1);
+  }
+  25%, 75% {
+    transform: scale(1.1);
+  }
+}
+
+/* Mobile Responsive - Updated */
+@media (max-width: 768px) {
+  .card-container {
+    padding: 1rem 0.5rem;
+  }
+
+  .card-content {
+    padding: 2rem 1.5rem;
+    margin: 1rem 0;
+  }
+
+  .card-title {
+    font-size: 2.2rem;
+  }
+
+  .photo-section {
+    width: 240px;
+    height: 180px;
+  }
+
+  .open-card-btn {
+    padding: 15px 30px;
+    font-size: 1.1rem;
+  }
+
+  .card-main {
+    gap: 1.2rem; /* Reduced from 2rem */
+  }
+
+  .floating-heart {
+    font-size: 1.2rem;
+  }
+
+  .photo-gallery {
+    gap: 0.4rem;
+    margin: 0.4rem 0; /* Reduced from 0.8rem 0 */
+  }
+  
+  .gallery-item {
+    width: 90px; /* Reduced from 110px */
+    height: 90px; /* Reduced from 110px */
+  }
+  
+  .mini-heart {
+    font-size: 0.7rem; /* Reduced from 0.9rem */
+  }
+}
+
+@media (max-width: 480px) {
+  .card-content {
+    padding: 1.5rem 1rem;
+    border-radius: 20px;
+  }
+
+  .card-title {
+    font-size: 1.8rem;
+  }
+
+  .photo-section {
+    width: 200px;
+    height: 150px;
+  }
+
+  .open-card-btn {
+    padding: 12px 25px;
+    font-size: 1rem;
+  }
+
+  .preview-text {
+    font-size: 1rem;
+  }
+
+  .message-preview {
+    padding: 1rem;
+  }
+
+  .floating-heart {
+    font-size: 1rem;
+    opacity: 0.4;
+  }
+
+  .photo-gallery {
+    gap: 0.3rem;
+    margin: 0.3rem 0; /* Reduced from 0.6rem 0 */
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  
+  .gallery-item {
+    width: 80px; /* Reduced from 100px */
+    height: 80px; /* Reduced from 100px */
+    flex: 0 0 auto;
+  }
+  
+  .mini-heart {
+    font-size: 0.6rem; /* Reduced from 0.8rem */
+  }
+}
+
+/* Very small screens - stack vertically for better portrait viewing */
+@media (max-width: 360px) {
+  .photo-gallery {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem; /* Reduced from 0.8rem */
+  }
+  
+  .gallery-item {
+    width: 90px; /* Reduced from 120px */
+    height: 90px; /* Reduced from 120px */
+  }
+}
+
+/* Dark mode consideration */
+@media (prefers-color-scheme: dark) {
+  .card-container {
+    background: linear-gradient(135deg, 
+      #4a2c40 0%, 
+      #5d3449 25%, 
+      #6b3d52 50%, 
+      #7a4660 75%, 
+      #8b4567 100%
+    );
+  }
+
+  .card-content {
+    background: rgba(0, 0, 0, 0.7);
+    color: #ffeef8;
+  }
+
+  .card-title,
+  .preview-text,
+  .footer-decoration,
+  .placeholder-content {
+    color: #ffeef8;
+  }
+}
